@@ -1,0 +1,223 @@
+.hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.heroImg {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroImg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30,26,23,0.1) 0%,
+    rgba(30,26,23,0.7) 60%,
+    rgba(30,26,23,0.92) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 4rem 0 3rem;
+}
+
+.breadcrumb {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: rgba(240,235,227,0.6);
+  margin-bottom: 1rem;
+  transition: color var(--transition);
+}
+
+.breadcrumb:hover { color: var(--bg-warm); }
+
+.heroTitle {
+  color: var(--bg-warm);
+  margin: 1rem 0 1.5rem;
+  max-width: 700px;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.bylineName {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--bg-warm);
+}
+
+/* BODY */
+.body {
+  padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.content { }
+
+.lead {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sideSection {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: opacity var(--transition);
+}
+
+.product:last-of-type { border-bottom: none; }
+.product:hover { opacity: 0.75; }
+
+.productBadge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.productName {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 0.15rem;
+}
+
+.productArrow {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.sideEmail {
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.emailTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--bg-warm);
+  line-height: 1.3;
+}
+
+.emailInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.06);
+  color: var(--bg-warm);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  outline: none;
+  margin-bottom: 0.75rem;
+  transition: border-color var(--transition);
+}
+
+.emailInput:focus { border-color: var(--accent-light); }
+.emailInput::placeholder { color: rgba(240,235,227,0.35); }
+
+.emailBtn { width: 100%; justify-content: center; }
+
+.relatedLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.relatedLink:last-child { border-bottom: none; }
+.relatedLink:hover { color: var(--accent); }
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar { grid-template-columns: 1fr; }
+  .heroTitle { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+}
