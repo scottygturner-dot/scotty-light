@@ -1,0 +1,88 @@
+.hero {
+  padding: clamp(4rem, 10vw, 7rem) var(--gutter) clamp(2rem, 5vw, 3rem);
+  background: var(--bg-warm);
+  border-bottom: 1px solid var(--border);
+}
+.heroTitle { color: var(--text); margin-bottom: 1rem; }
+.heroTitle em { font-style: italic; color: var(--accent); }
+.heroSub { max-width: 560px; }
+
+.featured {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  margin-bottom: 2.5rem;
+  min-height: 340px;
+}
+.featuredImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+.featuredImg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.featured:hover .featuredImg img { transform: scale(1.03); }
+.featuredBadge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 100px;
+}
+.featuredBody {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featuredTitle { color: var(--text); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.card { display: flex; flex-direction: column; }
+.imgWrap {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+.imgWrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.card:hover .imgWrap img { transform: scale(1.04); }
+.body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+  margin-top: 0.25rem;
+}
+.excerpt { font-size: 0.88rem; }
+
+.disclosure {
+  padding: 2rem var(--gutter);
+  background: var(--bg-warm);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .featured { grid-template-columns: 1fr; }
+  .featuredImg { height: 220px; border-radius: var(--radius-md) var(--radius-md) 0 0; }
+  .grid { grid-template-columns: 1fr; }
+}

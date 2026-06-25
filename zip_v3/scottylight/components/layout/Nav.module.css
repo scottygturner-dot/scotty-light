@@ -1,0 +1,121 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem var(--gutter);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.scrolled {
+  background: rgba(247, 244, 239, 0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.link:hover {
+  color: var(--text);
+  background: var(--bg-warm);
+}
+
+.cta {
+  margin-left: 0.5rem;
+  background: var(--accent);
+  color: var(--white) !important;
+  padding: 0.45rem 1rem;
+}
+
+.cta:hover {
+  background: var(--accent-dark) !important;
+  color: var(--white) !important;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: all var(--transition);
+}
+
+@media (max-width: 768px) {
+  .burger { display: flex; }
+
+  .links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 99;
+  }
+
+  .links.open { display: flex; }
+
+  .link {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .cta { margin-left: 0; }
+}

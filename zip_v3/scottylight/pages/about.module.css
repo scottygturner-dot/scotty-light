@@ -1,0 +1,90 @@
+.hero {
+  padding: clamp(4rem, 10vw, 7rem) var(--gutter) clamp(2rem, 5vw, 3rem);
+  background: var(--bg-dark);
+}
+.heroInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.heroTitle { color: var(--bg-warm); margin-bottom: 0; }
+.heroTitle em { font-style: italic; color: var(--accent-light); }
+
+.heroImage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.avatarWrap { }
+.avatar {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.heroStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+.stat { display: flex; flex-direction: column; gap: 0.2rem; }
+.statNum {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--bg-warm);
+  line-height: 1;
+}
+.statLabel { font-size: 0.75rem; color: rgba(240,235,227,0.5); }
+
+.storyWrap {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 5rem;
+  align-items: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+.sideCard {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+.credential {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.credential:last-child { border-bottom: none; padding-bottom: 0; }
+.credIcon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+.credTitle { font-weight: 600; font-size: 0.85rem; color: var(--text); margin-bottom: 0.15rem; }
+
+@media (max-width: 1024px) {
+  .storyWrap { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+@media (max-width: 768px) {
+  .heroInner { grid-template-columns: 1fr; }
+  .heroImage { display: none; }
+}
