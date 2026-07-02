@@ -40,6 +40,7 @@ export default function Footer() {
             <Link href="/newsletter">Newsletter</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
+            <a href="mailto:hello@scottylight.com">hello@scottylight.com</a>
           </div>
         </div>
       </div>

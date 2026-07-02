@@ -131,6 +131,9 @@ export default function About() {
                 I offer lighting consultations for homeowners, renovators, and Airbnb hosts.
                 Send me your floor plan and I'll put together a product list and lighting layout.
               </p>
+              <p className="body text-mid mb-3">
+                <a href="mailto:hello@scottylight.com">hello@scottylight.com</a>
+              </p>
               <Link href="/contact" className="btn btn-primary w-full" style={{justifyContent: 'center'}}>
                 Get In Touch →
               </Link>
