@@ -12,6 +12,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <meta name="theme-color" content="#F7F4EF" />
+        <link rel="icon" href="/logo-favicon.png" />
       </Head>
       <body>
         <Main />

@@ -7,8 +7,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.brand}>
           <div className={styles.logo}>
-            <span className={styles.mark}>✦</span>
-            <span className={styles.name}>Scotty Light</span>
+            <img src="/logo-nav-dark.png" alt="Scotty Light" style={{height: '36px', width: 'auto'}} />
           </div>
           <p className={styles.tagline}>Light. Mood. Space.</p>
           <p className={styles.bio}>

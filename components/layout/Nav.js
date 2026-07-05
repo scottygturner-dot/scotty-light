@@ -24,8 +24,7 @@ export default function Nav() {
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoMark}>✦</span>
-          <span className={styles.logoText}>Scotty Light</span>
+          <img src="/logo-nav-light.png" alt="Scotty Light" style={{height: '44px', width: 'auto'}} />
         </Link>
 
         <nav className={`${styles.links} ${open ? styles.open : ''}`}>
