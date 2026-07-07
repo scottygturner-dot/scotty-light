@@ -50,7 +50,7 @@ const guides = [
     category: 'Product Guide',
     title: 'Best Bedside Lighting for Airbnb: What Actually Works',
     excerpt: 'Tested across multiple properties. These are the bedside lamps that get mentioned in reviews, survive guest handling, and ship to Australia.',
-    image: '/images/sadhu-bedroom.jpg',
+    image: '/images/sadhu-bedside.jpg',
     readTime: '6 min',
   },
 ]
