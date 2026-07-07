@@ -9,7 +9,7 @@ const guides = [
     category: 'Strategy',
     title: 'Airbnb Mood Lighting: How Lighting Drives 5-Star Reviews',
     excerpt: 'Guests don\'t consciously notice lighting. They just feel comfortable, relaxed, and at home. Or they don\'t. Here\'s what the science — and my 226 reviews — says.',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=80',
+    image: '/images/sadhu-living.jpg',
     readTime: '9 min',
     featured: true,
   },
@@ -18,7 +18,7 @@ const guides = [
     category: 'Room Guide',
     title: 'Airbnb Bedroom Lighting: The Setup That Gets You Mentioned in Reviews',
     excerpt: 'The bedroom is where guests spend the most time and form their strongest impressions. Get this room right and the review writes itself.',
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=700&q=80',
+    image: '/images/sadhu-bedroom.jpg',
     readTime: '7 min',
   },
   {
@@ -26,7 +26,7 @@ const guides = [
     category: 'Room Guide',
     title: 'Airbnb Bathroom Lighting: Why It Matters More Than You Think',
     excerpt: 'Guests judge a property\'s quality most harshly in the bathroom. Harsh lighting makes everything feel cheap. Warm lighting makes it feel like a boutique hotel.',
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=700&q=80',
+    image: '/images/sadhu-shower.jpg',
     readTime: '6 min',
   },
   {
@@ -34,7 +34,7 @@ const guides = [
     category: 'Room Guide',
     title: 'Airbnb Outdoor & Entry Lighting: The First Impression That Sets the Tone',
     excerpt: 'Guests form a judgment about your property in the first 30 seconds. The right outdoor lighting sets the mood before they\'ve even opened the door.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80',
+    image: '/images/sadhu-exterior.jpg',
     readTime: '5 min',
   },
   {
@@ -42,7 +42,7 @@ const guides = [
     category: 'Product Guide',
     title: 'Best Smart Lighting for Airbnb: Automations That Impress Guests',
     excerpt: 'Motion-activated pathway lighting. Warm welcome scenes. The right smart lighting automations can make a mid-range property feel premium.',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&q=80',
+    image: '/images/sadhu-dining.jpg',
     readTime: '8 min',
   },
   {
@@ -160,7 +160,7 @@ export default function AirbnbLighting() {
         </div>
         <div className={styles.heroImage}>
           <img
-            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1000&q=85"
+            src="/images/sadhu-living.jpg"
             alt="Warm Airbnb bedroom lighting"
           />
           <div className={styles.heroReview}>
