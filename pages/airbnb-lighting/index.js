@@ -34,7 +34,7 @@ const guides = [
     category: 'Room Guide',
     title: 'Airbnb Outdoor & Entry Lighting: The First Impression That Sets the Tone',
     excerpt: 'Guests form a judgment about your property in the first 30 seconds. The right outdoor lighting sets the mood before they\'ve even opened the door.',
-    image: '/images/sadhu-exterior.jpg',
+    image: '/images/sadhu-entry.jpg',
     readTime: '5 min',
   },
   {
